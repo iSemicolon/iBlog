@@ -11,6 +11,8 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientInterceptor } from './http-client-interceptor';
 import { RegisterComponent } from './register/register.component';
 import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './auth/home/home.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { RegisterSuccessComponent } from './auth/register-success/register-succe
     AppComponent,
     HeaderComponent,
     RegisterComponent,
-    RegisterSuccessComponent
+    RegisterSuccessComponent,
+    LoginComponent,
+    HomeComponent
 
   ],
   imports: [

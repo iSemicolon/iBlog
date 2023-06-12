@@ -1,5 +1,6 @@
 package org.kol.iBlog.service;
 
+import org.kol.iBlog.dto.LoginRequest;
 import org.kol.iBlog.dto.RegisterRequest;
 import org.kol.iBlog.model.User;
 import org.kol.iBlog.repository.UserRepository;
@@ -35,6 +36,15 @@ public class AuthService {
         userRepository.save(user);
     }
 
+    public AuthenticationResponse login(LoginRequest loginRequest) {
+        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),
+                loginRequest.getPassword()));
+        SecurityContextHolder.getContext().setAuthentication(authenticate);
+        String authenticationToken = jwtProvider.generateToken(authenticate);
+        return new AuthenticationResponse(authenticationToken, loginRequest.getUsername());
+    }
+
+
     private String encodePassword(String password) {
         return passwordEncoder.encode(password);
     }
@@ -45,4 +55,5 @@ public class AuthService {
                 getContext().getAuthentication().getPrincipal();
         return Optional.of(principal);
     }
+
 }
