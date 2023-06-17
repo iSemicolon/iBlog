@@ -1,2 +1,2 @@
 # iBlog
-Register, Login, LogOut, AddPost, Spring Security, Angular-UI
+Full-Stack Project: [Register, Login, LogOut, AddPost, Spring Security, Angular-UI, Springboot]
