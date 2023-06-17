@@ -4,13 +4,20 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './auth/home/home.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'register-success', component: RegisterSuccessComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  {
+    path: 'add-post',
+    component: AddPostComponent,
+    canActivate: [AuthGuard],
+  },
 
 ];
 

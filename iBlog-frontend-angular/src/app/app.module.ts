@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './auth/home/home.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './auth/home/home.component';
     RegisterComponent,
     RegisterSuccessComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddPostComponent
 
   ],
   imports: [
