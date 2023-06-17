@@ -5,17 +5,16 @@
         <h1><a href="" class="title">iBlog</a></h1>
       </div>
 
-       <!-- Title -->
+       <!-- Add Post & Logout -->
        <div class="col-md-3" *ngIf="authService.isAuthenticated()">
         <a href="/add-post" class="new-post">Add Post</a>
-        <!-- <button class="logout btn btn-default" (click)="logout()">
+        <button class="logout btn btn-default" (click)="logout()">
           Logout
-        </button> -->
+        </button>
       </div>
 
        <!-- Register & login -->
-       <!--*ngIf="!authService.isAuthenticated()"  -->
-      <div class="col-md-3" >
+      <div class="col-md-3" *ngIf="!authService.isAuthenticated()" >
         <a href="/login" class="login btn btn-default">Login</a>
         <a href="/register" class="register btn btn-default">Register</a>
       </div>

@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './auth/home/home.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AuthGuard } from './guard/auth.guard';
+import { ReadMoreComponent } from './read-more/read-more.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'register-success', component: RegisterSuccessComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'post/:id', component: ReadMoreComponent },
   {
     path: 'add-post',
     component: AddPostComponent,
